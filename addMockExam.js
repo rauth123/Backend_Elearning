@@ -2,88 +2,128 @@ const { db } = require('./admin-init');
 
 const mockExamsData = [
   {
-    title: 'Final Backend Development Exam',
-    module: 'Backend Development',
+    title: 'Khmer Rouge Regime Final Mock Exam (1975–1979)',
+    module: 'Modern Cambodian History',
     timeLimitMinutes: 45, 
     passMarkPercent: 70, 
     questions: [
       {
-        questionText: "What is the purpose of the 'package.json' file?",
+        questionText: "Which person was the leader of the Khmer Rouge and prime minister of Democratic Kampuchea?",
         options: [
-          "To list all project dependencies",
-          "To run the Node.js application",
-          "To store user credentials",
-          "To define environment variables"
+          "Prince Norodom Sihanouk",
+          "Lon Nol",
+          "Pol Pot",
+          "Heng Samrin"
         ],
-        correctAnswerIndex: 0
-      },
-      {
-        questionText: "Which HTTP method is typically used to create a new resource in a REST API?",
-        options: [
-          "GET",
-          "PUT",
-          "POST",
-          "DELETE"
-        ],
+        // Pol Pot
         correctAnswerIndex: 2
       },
       {
-        questionText: "What does 'middleware' mean in the context of Express.js?",
+        questionText: "What was the official name of Cambodia under Khmer Rouge rule from 1975 to 1979?",
         options: [
-          "A function that runs at the end of the request-response cycle",
-          "A database for storing session data",
-          "A function that has access to the request, response, and next function",
-          "The main application file"
+          "The Kingdom of Cambodia",
+          "The Khmer Republic",
+          "Democratic Kampuchea",
+          "The People's Republic of Kampuchea"
         ],
+        // Democratic Kampuchea
         correctAnswerIndex: 2
       },
       {
-        questionText: "How do you get query parameters from a URL in Express? (e.g., /search?q=node)",
+        questionText: "Which segment of the population was forced to move from the cities to the countryside after the Khmer Rouge took power in 1975?",
         options: [
-          "req.params.q",
-          "req.body.q",
-          "req.query.q",
-          "req.data.q"
+          "Only government officials",
+          "The entire urban population",
+          "Foreign diplomats",
+          "Only military personnel"
         ],
+        // The entire urban population
+        correctAnswerIndex: 1
+      },
+      {
+        questionText: "What was the Khmer Rouge's main ideological goal, which involved destroying urban life and professional classes?",
+        options: [
+          "Establishing a multi-party democracy",
+          "Rapid industrialization",
+          "Creating a purely agrarian communist society",
+          "Restoring the monarchy"
+        ],
+        // Creating a purely agrarian communist society
         correctAnswerIndex: 2
       },
       {
-        questionText: "Which of these is NOT a valid NoSQL database type?",
+        questionText: "Which country invaded Cambodia in late 1978 and overthrew the Khmer Rouge regime in early 1979?",
         options: [
-          "Document",
-          "Key-Value",
-          "Relational",
-          "Column-family"
+          "China",
+          "The United States",
+          "Vietnam",
+          "Thailand"
         ],
+        // Vietnam
         correctAnswerIndex: 2
       }
     ]
   },
   {
-    title: 'Frontend Fundamentals Exam',
-    module: 'Frontend Development',
+    title: 'French Colonial Era Mock Exam (1863–1953)',
+    module: 'Colonial Cambodian History',
     timeLimitMinutes: 30,
     passMarkPercent: 75,
     questions: [
-       {
-        questionText: "What is the 'DOM'?",
+      {
+        questionText: "The French Protectorate was established after King Norodom signed a treaty in which year?",
         options: [
-          "Data Object Model",
-          "Document Object Model",
-          "Dynamic Object Method",
-          "Document Orientation Model"
+          "1853",
+          "1863",
+          "1873",
+          "1883"
         ],
+        // 1863
         correctAnswerIndex: 1
       },
       {
-        questionText: "How do you select an element with the id 'header' in CSS?",
+        questionText: "What administrative entity did Cambodia belong to, alongside Vietnam and Laos, during the French colonial period?",
         options: [
-          ".header",
-          "header",
-          "#header",
-          "Element.header"
+          "The French Commonwealth",
+          "French West Africa",
+          "French Indochina Union",
+          "The Federation of Asian States"
         ],
+        // French Indochina Union
         correctAnswerIndex: 2
+      },
+      {
+        questionText: "What was the title of the highest-ranking French official in Cambodia, who controlled all key administrative functions?",
+        options: [
+          "Governor-General",
+          "Viceroy",
+          "Resident-Superior",
+          "High Commissioner"
+        ],
+        // Resident-Superior
+        correctAnswerIndex: 2
+      },
+      {
+        questionText: "What key resource became a major commercial export for French colonial Cambodia?",
+        options: [
+          "Oil",
+          "Rubber",
+          "Silk",
+          "Diamonds"
+        ],
+        // Rubber
+        correctAnswerIndex: 1
+      },
+      {
+        questionText: "The 'Royal Crusade for Independence' was successfully led by which monarch, culminating in independence in 1953?",
+        options: [
+          "King Sisowath Monivong",
+          "King Norodom Sihanouk",
+          "King Ang Duong",
+          "Prince Sirik Matak"
+        ],
+        // King Norodom Sihanouk
+        correctAnswerIndex: 1
       }
     ]
   }
@@ -101,7 +141,7 @@ async function addDummyMockExams() {
     
     console.log(`Success! Added ${documentReferences.length} mock exams.`);
     documentReferences.forEach(docRef => {
-      console.log(`  - Added mock exam with ID: ${docRef.id}`);
+      console.log(`  - Added mock exam with ID: ${docRef.id}`);
     });
 
   } catch (error)
